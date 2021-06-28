@@ -68,9 +68,6 @@ p {
     padding: 0 15px;
     margin: 0 auto;
 }
-.header-contact {
-    border-bottom: 1px solid var(--top-lain);
-}
 img {
     display: block;
     max-width: 100%;
@@ -98,24 +95,27 @@ img {
 
 
 /* Общая навигация */
-.header-contact .container {
+.header-contact__container {
     display: flex;
     align-items: center;
 }
-.site-nav {
+.header-contact {
+    border-bottom: 1px solid var(--top-lain);
+}
+.nav-bloc {
     display: flex;
     align-items: center;
     margin-right: auto;
 }
-.site-nav-list{
+.site-nav {
     display: flex;
     align-items: center;
 }
-.site-nav-list li:not(:last-child){
+.site-nav__item:not(:last-child){
     margin-right: 50px;
 }
-.nav-link:hover,
-.nav-link:focus,
+.site-nav__link:hover,
+.site-nav__link:focus,
 .contact-item:focus,
 .contact-item:hover {
     color: var(--accent-color);
@@ -124,7 +124,7 @@ img {
     color: var(--accent-color);
 }
 
-.nav-link {
+.site-nav__link {
     position: relative;
     font-weight: 500;
     font-size: 14px;
@@ -135,7 +135,7 @@ img {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link.current::after {
+.site-nav--current:after {
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -149,10 +149,10 @@ img {
     display: flex;
     align-items: center;
 }
-.contact-list li:not(:last-child){
+.contact-list__item:not(:last-child){
     margin-right: 50px;
 }
-.contact-item  {
+.contact-list__link {
     color: var(--main-content-color);
     font-weight: 500;
     font-size: 14px;
@@ -164,13 +164,13 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact 
-.nav-link 
-.contact-item {
+.site-nav
+.contact-list {
     transition: color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-item:hover,
-.contact-item:focus {
+.contact-list__link:hover,
+.contact-list__link:focus {
     color: var(--accent-color);
 }
 .icon-mail {
@@ -201,8 +201,6 @@ img {
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    /*padding-top: 200px;
-    padding-bottom: 200px;*/
 }
 .hero-title {
     color: var(--primary-whit-color);
@@ -355,7 +353,7 @@ img {
     transition: border-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-icon {
+.form-input__icon {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -378,19 +376,6 @@ img {
     transition: border-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*.form-comment:placeholder-shown {
-    color: var(--placeholder-color);
-}
-.form-icon:focus {
-    fill: var(--accent-color);
-}
-.form-input:focus, 
-.form-comment:focus,
-.form-icon:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    fill: var(--accent-color);
-}*/
 .form-input:hover, 
 .form-comment:hover,
 .form-input:focus, 
@@ -398,16 +383,16 @@ img {
     border: 1px solid var(--accent-color);
     outline: none;
 }
-.form-input + .form-icon,
-.form-input + .form-icon{
+.form-input + .form-input__icon,
+.form-input + .form-input__icon{
     transition-property:  fill;
     transition-duration: 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon{
+.form-input:hover + .form-input__icon,
+.form-input:focus + .form-input__icon{
     fill: var(--accent-color);
 }
 .hidden {
@@ -475,7 +460,7 @@ img {
     justify-content: center;
     margin-top: 30px;
 }
-.btn-form {
+.form__btn {
     padding: 10px 55px;
 }
 .btn {
@@ -502,14 +487,14 @@ img {
 
 
 /* Что мы делаем */
-.content-list > li:not(:last-child) {
+.content-list__item:not(:last-child) {
     margin-right: 30px;
 }
 .content-list {
     display: flex;
     align-items: center;
 }
-.content-list > li{
+.content-list__item{
     width: 270px;
 }
 .content-text {
@@ -527,7 +512,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-.icon-features {
+.features-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,6 +526,7 @@ img {
     width: 70px;
     height: 70px;
 }
+/* Чем занимаются */
 .about {
     padding-top: 0;
 }
@@ -556,21 +542,21 @@ img {
     display: flex;
     align-items: center;
 }
-.main-list img{
+.main-list__img{
     display: block;
     max-width: 100%;
 }
-.main-list > li:not(:last-child) {
+.main-list__item:not(:last-child) {
     margin-right: 30px;
 }
-.main-item {
+.main-list__item {
     position: relative;
 }
-.main-img {
+.main-list__img {
     display: block;
     max-width: 100%;
 }
-.main-type {
+.main-list__type {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -587,8 +573,12 @@ img {
     justify-content: center;
     align-items: center;
 }
+/* Команда */
 .team{
     background-color: var(--section-command-color);
+}
+.command-list{
+    display: flex;
 }
 .command-title {
     color: var(--titel-text-color);
@@ -599,10 +589,10 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
 }
-.command-list .command-item:not(:last-child){
+.command-list__item:not(:last-child){
     margin-right: 30px;
 }
-.command-item {
+.command-list__item {
     color: var(--titel-text-color);
     font-size: 16px;
     line-height: 1.1875;
@@ -618,7 +608,7 @@ img {
     padding: 30px 32px;
     text-align: center;
 }
-.command-name {
+.command-description__name {
     font-family: Roboto, sans-serif;
     font-style: 400;
     font-weight: 500;
@@ -626,16 +616,13 @@ img {
     line-height: 1.1875;
     letter-spacing: 0.03em;
 }
-.command-type {
+.command-description__type{
     color: var(--main-content-color);
     font-family: Roboto, sans-serif;
     font-size: 16px;
     margin-top: 10px;
     line-height: 1.1875;
     letter-spacing: 0.03em;
-}
-.command-list{
-    display: flex;
 }
 
 
@@ -645,11 +632,11 @@ img {
     justify-content: space-between;
     margin-top: 16px;
 }
-.icon-item {
+.icon-list__item {
     width: 44px;
     height: 44px;
 }
-.icon-button {
+.icon-list__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -660,7 +647,7 @@ img {
     color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-list .icon-button {
+.icon-list__button {
     transition: background-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1), 
     fill 250ms 
@@ -683,11 +670,11 @@ img {
     display: flex;
     justify-content: center;
 }
-.client-item {
+.client-lis__item {
     width: 170px;
     height: 92px;
 }
-.client-link {
+.client-lis__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -701,11 +688,11 @@ img {
     fill 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-item:not(:last-child) {
+.client-lis__item:not(:last-child) {
     margin-right: 30px;
 }
-.client-link:hover,
-.client-link:focus {
+.client-lis__link:hover,
+.client-lis__link:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -880,29 +867,31 @@ img {
     color: var(--accent-color);
     font-weight: normal;
 }
-.logo-address-footer {
+.logo-address__footer {
     width: 231px;
     margin-right: 70px;
 }
-.icons-footer {
+
+/* Иконки для футера */
+.footer-icon {
     margin-left: 70px;
 }
-.icon-item {
+.footer-icon__item {
     display: block;
     width: 44px;
     height: 44px;
     background: var(--footer-icon-bt);
     border-radius: 50%;
 }
-.footer-block .icon-list {
+.footer-block .footer-icon__list {
     display: flex;
     width: 206px;
     justify-content: space-between;
 }
-.icon-list > li:not(:last-child) {
+.footer-icon__list:not(:last-child) {
     margin-right: 10px;
 }
-.icons-text {
+.footer-icon__text {
     font-weight: bold;
     line-height: 1.143;
     text-transform: uppercase;
@@ -912,12 +901,12 @@ img {
     display: flex;
     align-items: baseline;
 }
-.icon-button {
+.footer-icon__button {
     fill: var(--command-icon-color);
     border-radius: 50%;
 }
-.icon-button:hover,
-.icon-button:focus {
+.footer-icon__button:hover,
+.footer-icon__button:focus {
     background-color: var(--accent-color);
     fill: var(--primary-whit-color);
 }
@@ -928,7 +917,7 @@ img {
     width: 570px;
     margin-left: auto;
 }
-.footer-block .appeal {
+.footer__appeal {
     font-weight: bold;
     line-height: 1.143;
     text-transform: uppercase;

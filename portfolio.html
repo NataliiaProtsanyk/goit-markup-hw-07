@@ -9,44 +9,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">     
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="header-contact">
         <!--My contact--> 
-             <div class="container">
-                 <nav class="site-nav">
-                     <a href="index.html" class="logo"><span class="logo-title">Web</span>Studio</a>
-            
-                     <ul class="site-nav-list">
-                         <li class="nav-item"><a href="index.html" class="nav-link">Студия</a></li>
-                         <li class="nav-item"><a href="portfolio.html" class="nav-link current">Портфолио</a></li>
-                         <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
-                     </ul>
-                 </nav>
-                 <ul class="contact-list">
-                     <li>
-                         <a href="mailto:info@devstudio.com" class="contact-item">
-                            <svg class="icon-mail">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com
-                            </a>
-                        </li>
-                     <li>
-                         <a href="tel:+380961111111" class="contact-item">
-                            <svg class="icon-phone">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                            </a>
-                        </li>
-                 </ul> 
-             </div>
+        <div class="container header-contact__container">
+            <nav class="nav-bloc">
+                <a href="index.html" class="logo"><span class="logo-title">Web</span>Studio</a>
+                <ul class="site-nav">
+                    <li class="site-nav__item"><a href="index.html" class="site-nav__link">Студия</a></li>
+                    <li class="site-nav__item"><a href="portfolio.html" class="site-nav__link--current">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="contact.html" class="site-nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="contact-list">
+                <li class="contact-list__item">
+                    <a href="mailto:info@devstudio.com" class="contact-list__link">
+                        <svg class="icon-mail">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg> info@devstudio.com
+                    </a>
+                </li>
+                <li class="contact-list__item">
+                    <a href="tel:+380961111111" class="contact-list__link">
+                        <svg class="icon-phone">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul> 
+        </div>
          </header>
 
      <main>
        <!--Portfolio-->
-       <section class="projects section">
+       <section class="section projects">
     <div class="container">
         <ul class="button-list"> 
            <li><button type="button" class="button">Все</button></li>
@@ -236,32 +235,32 @@
                 </ul>
             </address>
         </div>
-        <div class="icons-footer">
+        <div class="footer-icon">
             <p class="icons-text">ПРИСОЕДИНЯЙТЕСЬ</p>
-            <ul class="icon-list">
-                <li class="icon-item">
-                    <a href="#" class="icon-button">
+            <ul class="footer-icon__list">
+                <li class="footer-icon__item">
+                    <a href="#" class="footer-icon__button">
                         <svg class="icon-footer" width="20" height="20">
                             <use href="./images/icons.svg#icon-instagram"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="icon-item">
-                    <a href="#" class="icon-button">
+                <li class="footer-icon__item">
+                    <a href="#" class="footer-icon__button">
                         <svg class="icon-footer" width="20" height="20">
                             <use href="./images/icons.svg#icon-twitter"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="icon-item">
-                    <a href="#" class="icon-button">
+                <li class="footer-icon__item">
+                    <a href="#" class="footer-icon__button">
                         <svg class="icon-footer" width="20" height="20">
                             <use href="./images/icons.svg#icon-facebook"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="icon-item">
-                    <a href="#" class="icon-button">
+                <li class="footer-icon__item">
+                    <a href="#" class="footer-icon__button">
                         <svg class="icon-footer" width="20" height="20">
                             <use href="./images/icons.svg#icon-linkedin"></use>
                         </svg>
@@ -270,7 +269,7 @@
             </ul>
         </div>
         <form class="form-footer">
-       <p class="appeal">Подпишитесь на рассылку</p>
+       <p class="footer__appeal">Подпишитесь на рассылку</p>
        <div class="form-client">
           <input class="email-input" type="email" name="e-mail" placeholder="E-mail">
           <button class="btn" type="submit">Подписаться

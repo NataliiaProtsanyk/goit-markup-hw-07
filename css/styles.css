@@ -102,7 +102,7 @@ img {
 .header-contact {
     border-bottom: 1px solid var(--top-lain);
 }
-.nav-bloc {
+.nav-block {
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -135,7 +135,7 @@ img {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav--current:after {
+.site-nav__link--current:after {
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -627,33 +627,54 @@ img {
 
 
 /*Соцсети команды */
-.icon-list {
+.social-networks-list {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
 }
-.icon-list__item {
+.social-networks-list__item {
     width: 44px;
     height: 44px;
 }
-.icon-list__button {
+.social-networks-list__btn {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    padding: 12px;
+    border-radius: 50%;
+    fill: var(--command-icon-color);
     transition: background-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1), 
     color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-list__button {
+.social-networks-wrapper {
+    margin-right: 93px;
+    width: 206px;
+}
+.social-networks__text {
+    font-weight: bold;
+    line-height: 1.143;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.social-networks-list__icon {
     transition: background-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1), 
     fill 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.social-networks-list__btn--bg {
+    background: var(--footer-icon-bt);
+    color: var(--primary-whit-color);
+}
+.social-networks-list__btn:hover, 
+.social-networks-list__btn:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-whit-color);
+  }
 
 /* Партнеры */
 .client-title {
@@ -822,36 +843,33 @@ img {
 
 
 /* Footer общий */
-.logo-copyright {
-    color: var(--primary-whit-color);
-}
-.logo-link {
-    font-family: Raleway, sans-serif;
-    text-decoration: none;
-    display: block;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-size: 26px;
-    line-height:1,1923;
-    letter-spacing: 0.03em;
-}
-.footer-block {
-    text-decoration: none;
-    color: var(--primary-whit-color);
-    background-color: var(--hero-color);
+.footer {
     padding: 60px 0;
+    color: var(--primary-whit-color);
+    background: var(--hero-color);
     min-width: 1200px;
+}
+.footer-container__container {
+    display: flex;
+    align-items: baseline;
+}
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0;
+    color: var(--primary-whit-color);
+}
+.address-logo-wrapper {
+    width: 231px;
+    margin-right: 70px;
+}
+.logo__accent {
+    color: var(--accent-color);
 }
 .address {
     font-style: normal;
 }
-.address-text {
-    margin-bottom: 9px;
-}
-.block-address {
-    margin-bottom: 9px;
-}
-.link-address {
+.address__link {
     text-decoration: none;
     color: var(--footer-link-color);
     display: block;
@@ -861,54 +879,14 @@ img {
     transition: color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-address:hover,
-.link-address:focus{
+.address__link:hover,
+.address__link:focus {
     cursor: pointer;
     color: var(--accent-color);
     font-weight: normal;
 }
-.logo-address__footer {
-    width: 231px;
-    margin-right: 70px;
-}
-
-/* Иконки для футера */
-.footer-icon {
-    margin-left: 70px;
-}
-.footer-icon__item {
-    display: block;
-    width: 44px;
-    height: 44px;
-    background: var(--footer-icon-bt);
-    border-radius: 50%;
-}
-.footer-block .footer-icon__list {
-    display: flex;
-    width: 206px;
-    justify-content: space-between;
-}
-.footer-icon__list:not(:last-child) {
-    margin-right: 10px;
-}
-.footer-icon__text {
-    font-weight: bold;
-    line-height: 1.143;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
-.footer-icon__button {
-    fill: var(--command-icon-color);
-    border-radius: 50%;
-}
-.footer-icon__button:hover,
-.footer-icon__button:focus {
-    background-color: var(--accent-color);
-    fill: var(--primary-whit-color);
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 

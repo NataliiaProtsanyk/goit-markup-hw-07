@@ -116,8 +116,8 @@ img {
 }
 .site-nav__link:hover,
 .site-nav__link:focus,
-.contact-item:focus,
-.contact-item:hover {
+.contact-list__item:focus,
+.contact-list__item:hover {
     color: var(--accent-color);
 }
 .current {
@@ -626,7 +626,15 @@ img {
 }
 
 
-/*Соцсети команды */
+/* Соцсети */
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+.social-networks-wrapper {
+    margin-right: 93px;
+    width: 206px;
+}
 .social-networks-list {
     display: flex;
     justify-content: space-between;
@@ -647,12 +655,8 @@ img {
     fill: var(--command-icon-color);
     transition: background-color 250ms 
     cubic-bezier(0.4, 0, 0.2, 1), 
-    color 250ms 
+    fill 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-networks-wrapper {
-    margin-right: 93px;
-    width: 206px;
 }
 .social-networks__text {
     font-weight: bold;
@@ -668,7 +672,7 @@ img {
 }
 .social-networks-list__btn--bg {
     background: var(--footer-icon-bt);
-    color: var(--primary-whit-color);
+    fill: var(--primary-whit-color);
 }
 .social-networks-list__btn:hover, 
 .social-networks-list__btn:focus {
@@ -769,12 +773,12 @@ img {
     margin-bottom: -30px;
     margin-right: -30px;
 }
-.portfolio-list > li {
+.portfolio-list__item {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.portfolio-item {
+.portfolio-list__item {
     background-color: var(--primary-whit-color);
 }
 .portfolio-title {
@@ -795,14 +799,14 @@ img {
     padding: 20px 24px;
     border: 1px solid var(--card-color);
 }
-.card-link {
+.portfolio-list__link {
     display: block;
     min-width: 100%;
     transition: box-shadow 250ms 
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list .card-link:hover,
-.portfolio-list .card-link:focus {
+.portfolio-list .portfolio-list__link:hover,
+.portfolio-list .portfolio-list__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -814,7 +818,7 @@ img {
     position: relative;
     overflow: hidden;
 }
-.projects-list-img {
+.projects-list__img {
     display: block;
     min-width: 100%;
 }
@@ -836,8 +840,8 @@ img {
     letter-spacing: 0.03em;
     color: var(--primary-whit-color);
 }
-.card-link:hover .card-overlay,
-.card-link:focus .card-overlay {
+.portfolio-list__link:hover .card-overlay,
+.portfolio-list__link:focus .card-overlay {
   transform: translateY(-100%);
 }
 
@@ -848,10 +852,6 @@ img {
     color: var(--primary-whit-color);
     background: var(--hero-color);
     min-width: 1200px;
-}
-.footer-container__container {
-    display: flex;
-    align-items: baseline;
 }
 .footer__logo {
     display: block;

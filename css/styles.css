@@ -120,7 +120,7 @@ img {
 .contact-list__item:hover {
     color: var(--accent-color);
 }
-.current {
+.site-nav__link--current {
     color: var(--accent-color);
 }
 
@@ -729,7 +729,7 @@ img {
     display: flex;
     justify-content: center;
 }
-.button-list > li:not(:last-child) {
+.button-list__item:not(:last-child) {
     margin-right: 8px;
 }
 .button { 

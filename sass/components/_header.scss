@@ -1,0 +1,19 @@
+.header-contact__container {
+    display: flex;
+    align-items: center;
+}
+.header-contact {
+    border-bottom: 1px solid $top-lain;
+}
+.nav-block {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+.site-nav__item:not(:last-child){
+    margin-right: 50px;
+}

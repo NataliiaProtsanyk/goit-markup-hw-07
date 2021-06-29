@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
 body {
     color: $titel-text-color;
     font-family: Roboto, sans-serif;

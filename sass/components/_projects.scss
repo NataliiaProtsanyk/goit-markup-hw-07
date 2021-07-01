@@ -29,3 +29,7 @@
     letter-spacing: 0.03em;
     color: $primary-whit-color;
 }
+.portfolio-list__link:hover .card-overlay,
+.portfolio-list__link:focus .card-overlay {
+  transform: translateY(-100%);
+}

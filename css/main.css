@@ -672,6 +672,11 @@ img {
   color: #FFFFFF;
 }
 
+.portfolio-list__link:hover .card-overlay,
+.portfolio-list__link:focus .card-overlay {
+  transform: translateY(-100%);
+}
+
 .footer {
   padding: 60px 0;
   color: #FFFFFF;
